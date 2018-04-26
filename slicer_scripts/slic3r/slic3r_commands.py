@@ -28,5 +28,18 @@ for model in folder_path:
 # read in config file
 config_file = ""
 
-param_settings = {} # key is command line arg; value is a list of values that we want that command to take on
-keys = {"--perimeter-speed": [30, 60, 90, 120, 150], 
+speeds = [30, 60, 90, 120, 150]
+min_cand_speeds = [60, 120]
+heights = [0.1, 0.2, 0.3, 0.4]
+candidate_param_settings = {"--perimeter-speed": min_cand_speeds, # default = 60
+		"--infill-speed": speeds, # defualt = 80
+		"--first-layer-speed": speeds, # default = 30
+		"layer-height": heights # default = 0.3
+		"solid-infill-every-layers": [0,2,4,6] # default = 0
+		}
+
+param_settings = candidate_param_settings["--perimeter-speed"]
+
+
+# for each config (in this case two speeds)
+	# run slicer command for everythingd
