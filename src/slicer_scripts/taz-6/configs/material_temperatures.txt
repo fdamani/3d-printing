@@ -1,0 +1,3 @@
+material,extruder,bed,clean
+ABS,230,85,161
+PLA,180,50,126
