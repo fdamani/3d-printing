@@ -37,8 +37,6 @@ train_raw = gtt.gcode_to_training_data(x_trimmed, training_data)
 coordinates = train_raw[:,1:4]
 
 
-
-
 #%matplotlib inline
 fig = plt.figure()
 ax = plt.axes(projection='3d')
